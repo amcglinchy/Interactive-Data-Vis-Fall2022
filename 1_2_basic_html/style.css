@@ -1,6 +1,6 @@
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 16px;
   padding: 1em;
 }
@@ -17,4 +17,31 @@ h3 {
 
 p {
   font-size: 1em;
+}
+table, th, td {
+  border: 2px solid black;
+  text-align: center;
+  border-collapse: collapse;
+  padding: 5px; 
+}
+th {
+  font-style: bold;
+  font-size: larger;
+}
+#space{
+  height: 100px;
+}
+.sched{
+  color: rgb(78, 53, 6);
+}
+button{
+  color:white;
+  background-color:rgb(78, 53, 6);
+  border-radius: 50px;
+}
+svg{
+  position: absolute;
+  width:200px; 
+  height:250px;
+  background-color: beige;
 }
