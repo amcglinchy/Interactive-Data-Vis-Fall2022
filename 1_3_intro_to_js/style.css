@@ -1,5 +1,5 @@
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 16px;
   padding: 1em;
 }
@@ -20,4 +20,25 @@ p {
 
 section {
   padding: 2em 0;
+}
+
+button{
+  background-color: rgb(207, 114, 228);
+  color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-color: black;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 2px 2px #000000;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#counter{
+  font-weight: bolder;
+  color: rgb(207, 114, 228);
 }
