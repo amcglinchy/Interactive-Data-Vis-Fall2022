@@ -17,3 +17,13 @@ h3 {
 p {
   font-size: 1em;
 }
+.dot{
+  fill: rgb(196, 88, 11);
+}
+.label{
+  fill: black;
+  font-size: 10px;
+}
+/* .dot:hover{
+  fill:blueviolet;
+} */
