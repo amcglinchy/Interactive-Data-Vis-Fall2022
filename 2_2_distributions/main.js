@@ -53,9 +53,6 @@ d3.csv("../data/incarcerated_population_states.csv", d3.autoType)
       .attr("x", d=>xScale(d.Total_Incarcerated))
       .attr("y", d=>yScale(d.Imprisonment_Rate))
       .attr("text-anchor", "start")
-      // .style("font-size", "10px")
-      // .style("fill", "pink")
-      // .raise();
 
       svg.append("g")
         .style("transform",`translate(0px,${height-margin}px)`)
@@ -92,7 +89,7 @@ d3.csv("../data/incarcerated_population_states.csv", d3.autoType)
   .attr("text-anchor", "middle")  
   .style("font-size", "10px") 
   .text("*circle size is indication of # of life sentences")
-    
+  
   });
 
 
