@@ -7,7 +7,7 @@ Use this markdown file to keep track of open questions/challenges from this week
 - What went easier than expected?
 - What, if anything, is currently blocking you?
 
-I'm actually just unsure what the "change in 95 percent days" columns represents in the CSV. And thus - what the dots represent? So, my title may be a little off.
+I'm actually just unsure what the "Change in 95 Percent Days" columns represents in the CSV. And thus - what the dots represent? So, my title may be a little off.
 
 Sometimes it helps to formulate what you understood and where you got stuck in order to move forward. Feel free to include `code snippets`, `screenshots`, and `error message text` here as well.
 

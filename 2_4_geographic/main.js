@@ -30,8 +30,10 @@ const width = window.innerWidth * 0.9,
   const projection = d3.geoAlbersUsa()
     .fitSize([width, height], geojson)
 
+   // DEFINE PATH FUNCTION
   const pathGen = d3.geoPath(projection)
 
+    // APPEND GEOJSON PATH  
   const states = svg.selectAll("path.states")
     .data(geojson.features)
     .join("path")
@@ -39,13 +41,13 @@ const width = window.innerWidth * 0.9,
     .attr("d", coords =>pathGen(coords))
     .attr("fill", "transparent")
     .attr("stroke", "black")
-
+    
+  // APPEND DATA AS SHAPE
   const heats = svg.selectAll("circle.heats")
   .data(heat)
   .join("circle")
   .attr("class", "heats")
   .attr("r", 2)
-  // .attr("fill", "blue")
   .attr("transform", (d) => {
     const [x,y] = projection([d.Long,d.Lat])
     return `translate(${x}, ${y})`
@@ -54,12 +56,12 @@ const width = window.innerWidth * 0.9,
 })
  
 
-  // DEFINE PATH FUNCTION
+ 
 
 
-  // APPEND GEOJSON PATH  
+
   
   
-  // APPEND DATA AS SHAPE
+
 
 });
