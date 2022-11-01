@@ -16,6 +16,9 @@ d3.csv('../data/prisonPopTime.csv', d => {
   console.log('data :>> ', data);
 
   // SCALES
+
+  //I tried to figure out how to make a stacked area chart, but failed.
+  
   //let keys = data.columns.slice(1)
   // let colorScale = d3.scaleOrdinal()
   //   .domain(keys)
@@ -61,7 +64,6 @@ d3.csv('../data/prisonPopTime.csv', d => {
   svg.append("g")
     .style("transform",`translate(${leftMargin}px,0px)`)
     .call(yAxis);
-
 
   // LINE GENERATOR FUNCTION
 
