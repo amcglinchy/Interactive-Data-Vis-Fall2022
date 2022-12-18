@@ -24,3 +24,12 @@ p {
   fill: black;
   font-size: 10px;
 }
+.tooltip {
+  display: inline;
+  position: fixed;
+  font-size: 12px;
+  background-color: azure;
+  border-radius: 5%;
+  text-align: center;
+  padding: 5px 0;
+}

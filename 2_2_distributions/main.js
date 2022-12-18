@@ -31,10 +31,10 @@ d3.csv("../data/incarcerated_population_states.csv", d3.autoType)
     const yAxis = d3.axisLeft(yScale);
     
     /* HTML ELEMENTS */
-    const statePopSvg = d3.select("container")
-      .append("svg")
-      .attr("width", width)
-      .attr("height", height);
+    // const statePopSvg = d3.select("container")
+    //   .append("svg")
+    //   .attr("width", width)
+    //   .attr("height", height);
 
     const circles = svg.selectAll(".dot")
     .data(data)
