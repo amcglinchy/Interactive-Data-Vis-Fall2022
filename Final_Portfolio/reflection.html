@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+    <title>Reflection</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Project Portfolio</a>
+        <a href="tutorials.html">Tutorials</a>
+        <a href="reflection.html">Project Reflection</a>
+    </div>
+    <div class="main">
+    <div class="center">
+        <h2>Project Reflection</h2>
+        <p>
+            This project was modeled on a choropleth map visualization I did <a href="https://public.tableau.com/app/profile/alex.mcglinchy/viz/WhereNYCsIncarceratedPopulationCallsHome/MapFirst">last semester in Tableau</a>. I wanted to take that map and make it more interactive for the user to be able to explore the data presented about the different neighborhoods while being able to see where in space they are. For this map I wanted to invite the user to explore by keeping the initial visuals very simple with little to no text, except for the legend/scale. Then, once the user hovers over a neighborhood a tooltip is revealed with the neighborhood name and all other neighborhoods become less opaque. Upon clicking a neighborhood the map zooms in closer on the neighborhood and a text box appears giving users more information about the neighborhood. I felt that having this information appear on top of the map once a neighborhood was clicked was the cleanest way to present this information. For the choropleth color scale I chose white to red, because to me red symbolizes pain and suffering, which I wanted to come through in this map for those neighborhoods most affected by incarceration rates.
+            <br>
+            <br>
+The design process we went through in class for this project was fun and interesting, and I did come up with some ideas about visualizing this data I hadn't thought about before, because they weren't possible with my knowledge of data viz at the time. Although, I was already pretty set on recreating the map from Tableau, so I didn't end up going with any ideas from the processes we went through in class. In that way, I don't think the critiques really affected my project at all. The way I've designed things in the past has been to just get started and make one thing, and then figure out what works and what doesn't and how I need to maybe pivot completely. I think it helps me to have something concretely designed and then get feedback from peers on how it's working or not working. This process does produce a lot of work that never gets seen or used but it's also great practice designing visualizations. I do think in the future I will implement some aspects of the design process we did in class, especially the prototyping exercise.
+<br>
+<br>
+One of my biggest challenges when beginning this project was understanding the new state management, because I did all of the section 2 tutorials, I hadn't really used the new boilerplate logic that was outlined in the section 3 tutorials. Another issue I had was with my data. My data came from manipulation I had performed in QGIS where I projected my map using a local NY/Long Island projection, which d3 does not recognize. So for the longest time, my map was not being drawn and I didn't understand why. When I figured it out I reprojected my map in QGIS to the WGS84 projection that d3 expects which fixed my problem. 
+<br>
+<br>
+Another major challenge I had was figuring out what to do about the neighborhoods that don't have any population or just shouldn't be included in the map like islands, parks, cemeteries and airports. After some time, I figured out that I could just filter them out by their population, and make them non-clickable on the map so that they're still represented as legitimate neighborhoods, but not included in the incarceration rate data. In order to mitigate these problems in future projects, I think it would help to explore the data a bit more before delving into creating such an involved visualization.
+<br>
+<br>
+If I had more time and resources I would add more visualizations to the project, which is something I mentioned in my prospectus. I would love to have some interactive scatter plots that show the different neighborhoods and the relationship between incarceration rates and the different economic factors highlighted in the map. Other visualizations that could be interesting would be a pie or donut chart showing the percentage of incarcerated individuals from each borough and/or neighborhoods within each borough. Another visualization idea I had in my prospectus, but did not implement in my final project is a Sankey diagram to visualize incarcerated individuals being relocated from their neighborhoods to prison, or vice versa. In addition, I think a further iteration of this project should include some more demographic data like race and education.
+<br>
+<br>
+More specifically, if I had more time with the current map, I would definitely try to add some kind of background behind the NYC borough map, just to give some context of where we are for folks that don't know the map of NYC. Perhaps this could be done with Leaflet, or maybe just adding some labels to identify the different boroughs. I also think it could be really interesting to be able to compare two neighborhoods. So if you're exploring the map you can click on one neighborhood and then clicking on another would allow you to see their stats side by side and still see where they are in relation to one another. Another idea I had is to use the legend to highlight neighborhoods via hovering over it.
+<br>
+<br>
+	This project taught me a lot of things that will be incredibly useful in the future using d3. First, I really started to understand state management which was super helpful in fixing a problem I was encountering with the text in the text box being blurry (I think it was being redrawn a bunch). I don't know that I completely understand it fully, but I know with more practice I can get a better grasp on it. Also, I learned to use the filter method to exclude some data I didn't want included in my choropleth scale. Another thing that I knew, but relearned time and again during this project is that the order and scope of things are extremely important in JavaScript.
+    <br>
+    <br>
+Something I'm still struggling with and would like to explore further is the enter/update/exit methods of d3. I think that only doing the section 2 tutorials was detrimental to my understanding of all the nuances of interactivity that d3 has to offer. 
+
+        </p>
+
+    </div>
+
+</div>
+    
+</body>
+</html>

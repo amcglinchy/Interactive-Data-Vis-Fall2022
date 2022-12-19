@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Project Portfolio</a>
+        <a href="tutorials.html">Tutorials</a>
+        <a href="reflection.html">Project Reflection</a>
+    </div>
+    <div class="main">
+    <h1>Interactive Data Visualization Final Portfolio</h1>
+    <img src="pics/final_nozoom.jpg" class="center" alt="">
+    <br>
+    <img src="pics/final_zoomG.jpg" class="center" alt="">
+    <br>
+    <a href="https://amcglinchy.github.io/Interactive_Final/" class="center">Check it out!</a>
+
+    <div class = "center">
+        <h2>Abstract</h2>
+        <p>In an attempt to end prison gerrymandering in New York, The New York State Legislative Task Force on Demographic Research and Reapportionment puts out an amendment to the census which reallocates everyone counted in NY state prisons to their previous known address. Taking this data and subtracting the original census population data, leaves us with a dataset allowing us to see where each incarcerated individual in NY state prisons comes from (this data does not include Federal prisons, those folks who are incarcerated in NY but previously lived in a different state, and those whose addresses could not be geocoded). This project will allow users to explore NYC neighborhoods via a choropleth map of incarceration rates. Additional information of median household income, % of income spent on housing, and poverty rates will also be available to let the user see how these economic factors may relate to incarceration rates in their neighborhoods.</p>
+        <h2>Sketches</h2>
+        <br>
+        <img src="pics/Screen Shot 2022-12-05 at 2.29.09 PM.png" class="center"alt="">
+        <br>
+        <img src="pics/Screen Shot 2022-12-05 at 2.29.26 PM.png" class="center"alt="">
+        <br>
+        <img src="pics/Screen Shot 2022-12-19 at 1.16.30 PM.png" class="center"alt="">
+        <br>
+        <h2>Proposed Site Architecture</h2>
+        <br>
+        <img src="pics/Screen Shot 2022-12-05 at 2.35.15 PM.png" class="center"alt="">
+        <h2>Data</h2>
+        <p>
+            <a href="https://latfor.state.ny.us/data/?sec=2020amendpop" >New York State Legislative Task Force on Demographic Research and Reapportionment</a>
+            <br>
+            US Census 2020
+            <br>
+            American Community Survey 5 Year Estimates (2016-2020)
+            <br>
+            Open Data NYC (census tract and NTA geospatial data)
+        </p>
+        <h2>Data Analysis</h2>
+        <p>
+            For this project I used a dataset that I had compiled last semester using the Pandas library in Python for cleaning and QGIS for further analysis. First, I wanted to focus only on NYC neighborhoods, so I only kept data from the 5 counties (Bronx, Kings, New York, Queens and Richmond). For the economic factors from the US Census (median household income, % poverty and % housing burden) I kept only the totals per census tract, and joined them all into one dataframe consisting of all the economic factors for each census tract across the 5 boroughs. I then brought this into QGIS and joined it with census tract geospatial data so that it could be mapped. From there, using QGIS, I made the data into centroids of each census tract which allowed me to average all of the centroid information into NTA. Thus leaving me with a geospatial dataset with neighborhood geographies and the economic factors per neighborhood.
+<br>
+<br>
+In order to find the number of incarcerated individuals from each geography, I took the adjusted dataset (from the Task Force) and subtracted the original 2020 Census population dataset - to give me a dataset with only the number of people per geography that were incarcerated at the time. From there, the analysis looks similar to what I did with the economic factors from the census. I had to join the data with census tract geospatial data, and create centroids for each census tract. Then I counted the centroids in the NTA polygons to get the number of people incarcerated per neighborhood area. I joined the economic data and population data to end up with one geojson showing the population, incarcerated population, % poverty, median household income and % housing burdened per NYC neighborhood. 
+<br>
+<br>
+Note: I define % housing burdened as individuals/families spending 30% or more of their income on housing costs including rent and mortgage. 
+
+        </p>
+    </div>
+</div>
+    
+    <script src="main_copy.js"></script>
+</body>
+</html>
